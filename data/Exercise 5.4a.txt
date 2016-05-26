@@ -1,0 +1,5 @@
+Data created for R-course
+result 1970-1980 result 1981-1990 result 1991-2000
+              13               77               96
+              15               97               91
+              23               67               66

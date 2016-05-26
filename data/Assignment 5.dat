@@ -1,0 +1,26 @@
+This file contains a lot of data in different formats.
+
+The first set of data is this:
+
+0.45 32 car 0.003
+NA 16 bus TRUE
+3.14 85 train VALUE
+% and then four more lines:
+84.34823 666 hoovercraft cosine,sine
+40932 666 space_shuttle integral
+488.33 666 submarine matrix
+2.718 007 bicycle 4.136e-15
+ 
+But there are more data here:
+
+3,333;45;feet;1
+;16;aeroplane;subspace
+
+and then,
+
+some more data:
+
+1.00,-9999,Scooter,4pi
+3.21,87,motorcycle,cone
+
+Thats it!
