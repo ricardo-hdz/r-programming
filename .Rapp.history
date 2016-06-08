@@ -1,517 +1,306 @@
-a(pi)
+?cycle
+?tapply
+?cycle
+?tapply
+str(presidents)
+summary(presidents)
+presidents
+cycle(presidents)
+tapply(presidents, presidents$Qtr1, presidents$Qtr2, presidents$Qtr3, presidents$Qtr4, cycle)
+tapply(presidents, cycle(presidents), mean, na.rm=T)
+?cut
+airquality$Wind
+cut(airquality$Wind, 10)
+tapply(cut(airquality$Wind, 10), airquality$Solar.R, mean)
+tapply(cut(airquality$Wind, 10), airquality$Solar.R, mean, na.rm=T)
+tapply(airquality$Solar.R, cut(airquality$Wind, 10), mean, na.rm=T)
+tapply(airquality$Solar.R, cut(airquality$Wind, 3), mean, na.rm=T)
+tapply(airquality$Solar.R, cut(airquality$Wind, breaks=2*(1:11)-1), mean, na.rm=T)
+?sapply
+?with
+?prop.table
+Count=c(81,6,192,71,234,36,55,25))
+my.data<-data.frame(Treatment=c(rep("A",4),rep("B",4)), Stone=rep(rep(c("Small","Large"),c(2,2)),2),Success=rep(c(1,0),4),Count=c(81,6,192,71,234,36,55,25))
+my.data
+?xtabs
+?prop.table
+?xtabs
+my.table<-xtabs(Count~Treatment+Success+Stone,data=my.data) - correct
+my.table<-xtabs(Count~Treatment+Success+Stone,data=my.data)
+my.table
+?prop.table
+?margin.table
+margin.table(prop.table(my.table, 1:2),2)
+margin.table(prop.table(my.table, 1:2),1)
+margin.table(prop.table(my.table, 1:2),2)
+prop.table(margin.table(my.table, 1:2),1)
+prop.table(margin.table(my.table, 1:2),2)
+margin.table(prop.table(my.table, 1:2),2)
+margin.table(prop.table(my.table, 1:2),1)
+margin.table(prop.table(my.table, 1:2),2)
+prop.table(margin.table(my.table, 1:2),1) - correct
+prop.table(margin.table(my.table, 1:2),1)
+my.table
+prop.table(my.table[,,2],2)
+prop.table(my.table[,,2],1)
+prop.table(my.table[,,1],2)
+my.table
+prop.table(my.table[,,1],2)
+prop.table(my.table[,,1],1)
+my.table
+prop.table(my.table[1,,],1)
+prop.table(my.table[1,,],2)
+my.table[1,,]
+prop.table(my.table[1,,],2)
+?prop.table
+prop.table(my.table[2,,],2)
+my.table
+margin.table(my.table, c(1,3))
+?par
+?mforw
+?mfrow
+??mfrow
+rnorm(5, mean=2,sd=1)
+?curve
+?par
+?plot
+par(mfrow = c(2, 2),lwd=3,col="red")
+plot(rnorm(25, min=1,max=25))
+plot(rnorm(25, mean=2,sd=1))
+par(mfrow = c(2, 2),lwd=3,col="red")
+par(mfrow = c(3, 3),lwd=3,col="red")
+?curve
+curve(rnorm(25, mean=2,sd=1), 1,25)
+par(mfrow = c(3, 3),lwd=3,col="red")
+c<-rnorm(25, mean=2,sd=1)*9
+c
+c[3,3]
+a[3,3]
+a<-[3,3]
+a<-c(3,3)
+a
+a<-v(3,3)
+a<-c(3,3)
+x<-rnorm(1000)
+plot(density(x), xlim=c(-8,16))
+y<-rnorm(1000,mean=8)
+lines(density(y),col=blue)
+x<-rnorm(1000)
+plot(density(x), xlim=c(-8,16))
+y<-rnorm(1000,mean=8)
+lines(density(y),col="blue")
+generate <- function() {#
+	return rnorm(25,mean=25,sd=1)#
 }
-customFunction <- function(x) {#
-	3 * sin(x/2) + x#
+generate <- function() {#
+	rnorm(25,mean=25,sd=1)#
 }
-customFunction
-customFunction(0)
-customFunction(-1)
-customFunction(pi)
-plot(customFunction(-7),customFunction(7))
-load(".RData")
-?source
-source('/Users/ricardohdz/r-projects/customFunction.R')
-?nrow
-c(5,4,3,2,1,0)+2
-plot(pi)
-plot(sin, -pi, pi)
-?cat
-?density
-?hist
-?'if'
-?summary
-my.display <- function(x) {#
-	cat('summary of input:\n', summary(x))#
+generate()
+mydata <- replicate(9, generate())
+mydata
+par(mydata,mfrow = c(3, 3),lwd=3,col="red")
+par(mydata,mfrow = c(3, 3),lwd=3)
+plot(mydata)
+curve(density(mydata))
+?curve
+plot(rnorm(25, mean=2,sd=1))
+my.ozone<-airquality$Ozone[!is.na(airquality$Ozone) & airquality$Ozone>1]
+mean.1<-mean(my.zone)
+mean.1<-mean(my.ozone)
+sd.1<-sd(my.ozone)
+mean.1<-mean(my.ozone)
+sd.1<-sd(my.ozone)
+mean.1
+sd.1
+str(my.ozone)
+summary(my.ozone)
+count(my.ozone)
+str(my.ozone)
+my.ozone.length
+length(my.ozone)
+??qqplot
+?qqplot
+qqplot(my.ozone, rnorm(115,mean=42.48696,sd=32.9056))
+?lines
+lines(col.main="blue")
+lines(x,col.main="blue")
+lines(my.ozone,col="blue")
+lines(rnorm(115,mean=42.48696,sd=32.9056,col="green")
+rm<-rnorm(115,mean=42.48696,sd=32.9056)
+qqplot(my.ozone, rm)
+lines(my.ozone,col="blue")
+lines(rm,col="green")
+qqplot(my.ozone, rm)
+lines(0:200,0:200,type="l",lwd=3,col="Red")
+mean.2<-mean(log(my.ozone))
+sd.2<-sd(log(my.ozone))
+qqplot(my.ozone,rm2)
+rm2<-rnorm(115,mean=mean.2,sd=sd.2)
+qqplot(my.ozone,rm2)
+lines(0:200,0:200,type="l",lwd=3,col="Red")
+qqplot(my.ozone,exp(rm2))
+lines(0:200,0:200,type="l",lwd=3,col="Red")
+?prod
+?sample
+doone<- function() {#
+	x <-sum(sample(1:6),replace=T)#
+	y<-sample(1:6,x,replace=T)#
+	y#
 }
-my.display(5)
-?graph
-?hist?
-?hist
-?density
-my.display <- function(x, display = false, type = '', freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display && type == '') {#
-		return 'Please specify type as either hist or density'#
-	} else if (display && type == 'hist') {#
-		return hist(x, freq = freqValue)#
-	} else if (display && type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
+set.seed(457778)
+yvalues<-replicate(1000,done())
+yvalues<-replicate(1000,doone())
+hist(yvalues)
+doone<- function() {#
+	x <-sum(sample(1:6),2,replace=T)#
+	y<-sample(1:6,x,replace=T)#
+	y#
 }
-my.display <- function(x, display = false, type = '', freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == '') {#
-		return 'Please specify type as either hist or density'#
-	} else if (display & type == 'hist') {#
-		return hist(x, freq = freqValue)#
-	} else if (display & type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
+set.seed(457778)
+yvalues<-replicate(1000,doone())
+hist(yvalues)
+doone<- function() {#
+	x <-sum(sample(1:6,2,replace=T))#
+	y<-sum(sample(1:6,x,replace=T))#
+	y#
 }
-my.display <- function(x, display = false, type = '', freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == '') {#
-		return "Please specify type as either hist or density"#
-	} else if (display & type == 'hist') {#
-		return hist(x, freq = freqValue)#
-	} else if (display & type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display <- function(x, display = false, type = "", freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return "Please specify type as either hist or density"#
-	} else if (display & type == 'hist') {#
-		return hist(x, freq = freqValue)#
-	} else if (display & type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-?'if'
-my.display <- function(x, display = false, type = "", freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return cat()"Please specify type as either hist or density")#
-	} else if (display & type == 'hist') {#
-		return hist(x, freq = freqValue)#
-	} else if (display & type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display <- function(x, display = false, type = "", freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return cat("Please specify type as either hist or density")#
-	} else if (display & type == 'hist') {#
-		return hist(x, freq = freqValue)#
-	} else if (display & type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display <- function(x, display = false, type = "", freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		cat("Please specify type as either hist or density")#
-	} else if (display & type == 'hist') {#
-		return hist(x, freq = freqValue)#
-	} else if (display & type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-?return
-my.display <- function(x, display = false, type = "", freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		hist(x, freq = freqValue)#
-	} else if (display & type == 'density') {#
-		return density(x)#
-	} else {#
-		return 'N args specified'#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display <- function(x, display = false, type = "", freqValue = false) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		return('N args specified')#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
+set.seed(457778)
+yvalues<-replicate(1000,doone())
+hist(yvalues)
+my.data <- read.csv('data/Lab10.csv')
+my.data
+data1<-my.data$systolic.bp[my.data$Genotype=="BA"]
+data2<-my.data$systolic.bp[my.data$Genotype=="BB"]
+testResult <- t.test(data1,data2)
+testResult
+plot(density(data1))
+plot(density(data1))
+lines(density(data2),col="blue")
+my.new.data<-my.data
+my.new.data$Genotype<-"BB"
+index.temp<-sample(1:50,n1)
+my.new.data
+n1<-length(data1)
+n1
+my.new.data<-my.data
+my.new.data$Genotype<-"BB"
+index.temp<-sample(1:50,n1)
+my.new.data$Genotype[index.temp]<-"BA"
+new.data1<-my.new.data$systolic.bp[my.new.data$Genotype=="BA"]
+new.data2<-my.new.data$systolic.bp[my.new.data$Genotype=="BB"]
+t.test(new.data1,new.data2)$statistic
+index.temp<-sample(1:50,n1)
+seed(1234)
 set.seed(1234)
-my.data
-my.data<-rnorm(200)
-my.display(my.data)
-my.display <- function(x, display = FALSE, type = "", freqValue = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		return('N args specified')#
-	}#
-	#cat('summary of input:\n', summary(x))#
+my.new.data<-my.data
+my.new.data$Genotype<-"BB"
+index.temp<-sample(1:50,n1)
+my.new.data$Genotype[index.temp]<-"BA"
+new.data1<-my.new.data$systolic.bp[my.new.data$Genotype=="BA"]
+new.data2<-my.new.data$systolic.bp[my.new.data$Genotype=="BB"]
+t.test(new.data1,new.data2)$statistic
+.test
+t.test
+function sim() {#
+my.new.data<-my.data#
+my.new.data$Genotype<-"BB"#
+index.temp<-sample(1:50,n1)  #
+my.new.data$Genotype[index.temp]<-"BA"#
+new.data1<-my.new.data$systolic.bp[my.new.data$Genotype=="BA"]#
+new.data2<-my.new.data$systolic.bp[my.new.data$Genotype=="BB"]#
+return t.test(new.data1,new.data2)$statistic#
 }
-set.seed(1234)
-my.data<-rnorm(200)
-my.display(my.data)
-my.display <- function(x, display = FALSE, type = "", freqValue = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		md(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
+sim  <- function() {#
+my.new.data<-my.data#
+my.new.data$Genotype<-"BB"#
+index.temp<-sample(1:50,n1)  #
+my.new.data$Genotype[index.temp]<-"BA"#
+new.data1<-my.new.data$systolic.bp[my.new.data$Genotype=="BA"]#
+new.data2<-my.new.data$systolic.bp[my.new.data$Genotype=="BB"]#
+return t.test(new.data1,new.data2)$statistic#
 }
-my.display(my.data)
-my.display <- function(x, display = FALSE, type = "", freqValue = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
+sim  <- function() {#
+my.new.data<-my.data#
+my.new.data$Genotype<-"BB"#
+index.temp<-sample(1:50,n1)  #
+my.new.data$Genotype[index.temp]<-"BA"#
+new.data1<-my.new.data$systolic.bp[my.new.data$Genotype=="BA"]#
+new.data2<-my.new.data$systolic.bp[my.new.data$Genotype=="BB"]#
+t.test(new.data1,new.data2)$statistic#
 }
-my.display(my.data)
-my.display(my.data,display=TRUE,type="hist")
-my.display <- function(x, display = FALSE, type = "", freqValue = TRUE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
+my.t.values <- replicate(10000,sim())
+my.t.values
+set.seed(554)
+my.t.values <- replicate(10000,sim())
+my.t.values
+sim  <- function() {#
+my.new.data<-my.data#
+my.new.data$Genotype<-"BB"#
+index.temp<-sample(1:50,n1)  #
+my.new.data$Genotype[index.temp]<-"BA"#
+new.data1<-my.new.data$systolic.bp[my.new.data$Genotype=="BA"]#
+new.data2<-my.new.data$systolic.bp[my.new.data$Genotype=="BB"]#
+t.test(new.data1,new.data2)$p#
 }
-my.display(my.data,display=TRUE,type="hist")
-my.display(my.data,display=TRUE,type="hist",prob=TRUE)
-hist?
-?hist
-my.display <- function(x, display = FALSE, type = "", freqValue = FALSE, probValue = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue, prob = ))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
+my.t.values <- replicate(10000,sim())
+my.t.values
+sim  <- function() {#
+my.new.data<-my.data#
+my.new.data$Genotype<-"BB"#
+index.temp<-sample(1:50,n1)  #
+my.new.data$Genotype[index.temp]<-"BA"#
+new.data1<-my.new.data$systolic.bp[my.new.data$Genotype=="BA"]#
+new.data2<-my.new.data$systolic.bp[my.new.data$Genotype=="BB"]#
+t.test(new.data1,new.data2)$statistic#
 }
-my.display(my.data,display=TRUE,type="hist")
-my.display <- function(x, display = FALSE, type = "", freqValue = FALSE, probValue = TRUE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue, prob = ))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display(my.data,display=TRUE,type="hist")
-my.display <- function(x, display = FALSE, type = "", freqValue = TRUE, probValue = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue, prob = ))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display(my.data,display=TRUE,type="hist")
-my.display(my.data,display=TRUE,type="hist",prob=TRUE)
-my.display(my.data,display=TRUE,type="hist",probValue=TRUE)
-my.display <- function(x, display = FALSE, type = "", freqValue = TRUE, probValue = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = freqValue, prob = probValue))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display(my.data,display=TRUE,type="hist",probValue=TRUE)
-my.display <- function(x, display = FALSE, type = "", freqValue = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = prob))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display(my.data,display=TRUE,type="hist")
-my.display <- function(x, display = FALSE, type = "", prob = FALSE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = prob))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display(my.data,display=TRUE,type="hist")
-my.display <- function(x, display = FALSE, type = "", prob = TRUE) {#
-	#type = 'hist' || 'density'#
-	if (display & type == "") {#
-		return(cat("Please specify type as either hist or density"))#
-	} else if (display & type == 'hist') {#
-		return(hist(x, freq = prob))#
-	} else if (display & type == 'density') {#
-		return(density(x))#
-	} else {#
-		#return('N args specified')#
-		median(x)#
-	}#
-	#cat('summary of input:\n', summary(x))#
-}
-my.display(my.data,display=TRUE,type="hist")
-my.display(my.data,display=TRUE,type="density")
-my.display(my.data,display=TRUE)
-0 != false
-0 != FALSE
-0 == FALSE
-matrix(1:6,nrow=3,ncol=3)
-matrix(nrow=3,ncol=3)
-x<-matrix(1:12,4)
-x
-x[cbind(c(1,3,2),c(3,3,2))]
-x
-cbind(c(1,3,2),c(3,3,2))
-x
-x[c(1,3,2),c(3,3,2)]
-row<-matrix(rep(1:100,100),nrow=100)
-column<-matrix(rep(1:100,100),nrow=100,byrow=T)
-A<-3*column^3/(1+row*column)
-A
-row<-matrix(rep(1:100,100),nrow=100)
-column<-matrix(rep(1:100,100),nrow=100,byrow=T)
-A<-3*column^3/(1+row*column)
-row
-column<-matrix(rep(1:100,100),nrow=100,byrow=T)
-column
-A
-sum(A)
-sum(A[,1])
-A[,1]
-sum(A[,1])
-z<-rep(9:10,1)
-z
-?rep
-set.seed(9852)
-my.data<-list()
-for(i in 1:100){#
-  my.data[[i]]<-matrix(rnorm(16),nrow=4)#
-}
-my.data
-my.data[[1]]
-my.data[1]
-my.data[1]
-my.data[2]
-my.data[2,3]
-my.data
-my.index<-list()#
-for(i in 1:100){#
-	my.index[[i]]<-(my.data[[i]]<0)#
-}
-my.negatives<-matrix(rep(0,16),nrow=4)#
-for(i in 1:100){#
-	my.negatives<-my.negatives+my.index[[i]]#
-}#
-my.negatives
-sum(my.negatives)
-c(my.negative.values,my.data[[i]][my.index[[i]]])
-my.negative.values<-numeric(0)
-c(my.negative.values,my.data[[i]][my.index[[i]]])
-summary(my.negative.values)
-for(i in 1:100){#
-	my.negative.values<-c(my.negative.values,my.data[[i]][my.index[[i]]]) #
-}
-summary(my.negative.values)
-getwd()
-getwd()
-getwd()
-mydata<-read.table('data/data.exercise5.1.dat', header=TRUE)
-mydata<-read.table('data/data.exercise5.1.dat')
-?read.table
-mydata<-read.table('data/data.exercise5.1.dat', na.strings='NA')
-mydata<-read.table('data/data.exercise5.1.dat', skip=1,header=T)
-mydata
-mydata<-read.table('data/data.exercise5.2.dat', sep=";", skip=2,header=T)
-mydata
-mydata<-read.csv2('data/data.exercise5.3.csv')
-mydata<-read.csv2('data/data.exercise5.3')
-mydata<-read.csv2('data/Exercise 5.3.csv')
-mydata
-mydata<-read.csv2('data/Exercise 5.3.csv',skip=2,sep=",")
-mydata
-mydata<-scan("data/Exercise 5.4a.txt")
-mydata<-scan("data/Exercise 5.4a.txt",skip="1")
-mydata<-file("data/Exercise 5.4a.txt",skip="1")
-mydata<-file("data/Exercise 5.4a.txt")
-mydata
-mydata<-read.table("data/Exercise 5.4a.txt",skip="1")
-mydata<-read.table("data/Exercise 5.4a.txt",skip="1",header=T)
-mydata<-read.table("data/Exercise 5.4a.txt",skip=1,header=T)
-f1<-file("data/Exercise 5.4a.txt",open="r")
-readLines(f1)
-mydata<-scan(f1,what=int(),nlines1)
-mydata<-scan(f1,what="",nlines1)
-mydata<-scan(f1,what="",nlines=1)
-f1<-file("data/Exercise 5.4a.txt",open="r")
-mydata<-scan(f1,what="",nlines=1)
-mydata
-mydata<-scan(f1,what="",nlines=1)
-mydata
-mydata[1]<-scan(f1,what="",nlines=1)
-f1<-file("data/Exercise 5.4a.txt",open="r")
-mynames<-scan(f1,what="",nlines=1,skip=1)
-mydata<-read.table(f1)
-close(f1)
-mynames<-paste(mynames[c(1,3,5)], mynames[c(2,4,6)])
-names(mydata)<-mynames
-mydata
-mydata<-list()
-mynames<-character(2)
-f1<-file("data/Exercise 5.5b.txt", open="r")
-f1<-file("data/Exercise 5.4b.txt", open="r")
-mynames[1]<-scan(f1,what="",nlines=1,skip=1)
-mydata[[1]]<-scan(f1,nlines=1)
-mynames[2]<-scan(f1,what="",nlines=1)
-mydata[[2]]<-matrix(scan(f1),nrow=4,byrow=T)
-close(f1)
-names(mydata)<-mynames
-mydata
-rbind?
-?rbind
-f1<-file("data/Assignment 5.dat",open="r")
-my.data<-read.table(f1,skip=4,comment.char="%",nrows=7)
-my.data2<-read.table(f1,skip=3,sep=";",dec=",",nrows=2)
-my.data3<-read.table(f1,skip=5,na.strings="-9999",sep=",",nrows=2)
-my.all.data<-rbind(my.data,my.data2,my.data3)
-my.all.data
-set.seed(9007)#
-my.data<-data.frame(x=rnorm(10),y=rnorm(10)+5,z=rchisq(10,1))#
-additional.data<-data.frame(x=rnorm(3),y=rnorm(3)+5,z=rchisq(3,1))
-?write.data
-??write.data
-write.data(my.data, file="data/Exercise 6.txt")
-?write.file
-??write.file
-write.file(my.data, file="data/Exercise 6.txt")
-write.table(my.data, file="data/Exercise 6.txt", row.names=F,col.names=F)
-set.seed(45)
-my.data<-data.frame(x=rnorm(10),y=rnorm(10),z=rnorm(10))
-?write.csv2
-write.csv2(my.data,file="6.2.csv")
-write.csv2(my.data,file="6.2.csv")
-write.csv2(my.data,file="data/6.2.csv")
-write.csv2(my.data,file="data/6.2.csv",row.names=T,col.name=T)
-write.csv2(my.data,file="data/6.2.csv",row.names=T,col.names=T)
-write.csv2(my.data,file="data/6.2.csv",col.names=T)
-write.csv2(my.data,file="data/6.2.csv",row.names=T,col.names=T)
-write.csv2(my.data,file="data/6.2.csv",row.names=TRUE,col.names=TRUE)
-write.csv2(my.data,file="data/6.2.csv",row.names=TRUE,col.names=TRUE,sep=";")
-write.csv(my.data,file="data/6.2.csv",row.names=TRUE,col.names=TRUE,sep=";")
-?write.lines
-??write.lines
-?sink
-??write.lines
-my.data<-data.frame(a=LETTERS[1:5],b=1:5)
-my.data
-write.table(my.data,file="data/6.2a.txt")
-write.table(my.data,file="data/6.2a.txt",sep=";",row.names=F)
-my.text<-"TITLE extra line\n2 3 5 7\n11 13 17\nOne more line"
-writeLines(my.text,con="data/6.2b.txt")
-set.seed(45)
-my.data<-data.frame(x=rnorm(10),y=rnorm(10),z=rnorm(10))
-save?
-?save
-save(my.data,file="6.2.Rdata")
-save(my.data,file="data/6.2.Rdata")
-rm(list=ls())
-ls()
-load(file="data/6.2.Rdata")
-ls()
-??write.table
-?digits
-?round
-?format
-set.seed(9007)
-my.data<-data.frame(x=rnorm(10),y=rnorm(10)+5,z=rchisq(10,1))
-write.table(round(my.data,digits = 2),"Assignment 6a.txt",row.names=FALSE)
-write.table(format(my.data,digits = 20),"Assignment 6b.txt",row.names=FALSE)
-my.data2<-my.data*10e5
-write.table(my.data2,file="data/Assignment6c.txt",row.names=F)
-dataRead<-read.table(file="data/Assignment6c.txt",header=T)
-dataRead/10e5
-my.date3<-dataRead/10e5
-my.data[;1,1]-my.date3[1,1]
-my.data[1,1]-my.date3[1,1]
-format(my.data[1,1]-my.date3[1,1],digits=20)
-library(help=RPDBC)
-library(help=RODBC)
-library(RODBC)
-?install
-??install
-install.packages(RODBC)
-library(help=RODBC)
-library(RODBC)
-library(RODBC)
+my.t.values <- replicate(10000,sim())
+my.t.values
+tail(my.t.values)
+set.seed(554)
+my.t.values <- replicate(10000,sim())
+tail(my.t.values)
+airquality
+lmobj<-lm(log(ozone) ~ radiation, wind, temperature,  ozone =1)
+str(airquality)
+lmobj<-lm(log(ozone) ~ Solar.R, Wind, Temp,  Ozone =1)
+lmobj<-lm(log(ozone) ~ Solar.R + Wind +Temp,  Ozone =1)
+lmobj<-lm(log(Ozone) ~ Solar.R + Wind +Temp,  Ozone =1)
+?subset
+lmobj<-lm(log(Ozone) ~ Solar.R + Wind +Temp,  data=subset(airquality, Ozone = 1)
+lmobj<-lm(log(Ozone) ~ Solar.R + Wind +Temp,  data=subset(airquality, Ozone = 1))
+lmobj<-lm(log(Ozone) ~ Solar.R + Wind +Temp,  data=subset(airquality, Ozone = 1))
+lmobj
+summary(lmobj)
+plot(qqnorm(lmobj))
+qqnorm(lmobj$res)
+sd.1<-sd(lmobj$res)
+summary(lmobj)
+lmobj$coefficients
+names(lmobj$coefficients)
+lmobj$Wind
+names(lmobj)
+names(lmobj)
+?drop1
+lmobj1<-lm(log(Ozone) ~ Solar.R + Wind +Temp,  drop1(newdata, Solar.R))
+newdata<-subset(airquality, Ozone = 1)
+lmobj1<-lm(log(Ozone) ~ Solar.R + Wind +Temp,  drop1(newdata, Solar.R))
+?drop1
+lmobj<-lm(log(Ozone) ~ Solar.R + Wind +Temp,  data=subset(airquality, Ozone = 1))
+drop1(lmobj, Solar.R)
+drop1(lmobj, Wind + Temp)
+summary(father.son)
+load(UsingR)
+install.package(UsingR)
+install.package("UsingR")
+?install.package
+???install.package
+??install.package
+install.packages(UsingR)
+install.packages("UsingR")
+load(UsingR)
+load("UsingR")
+summary(father.son)
+Sys.setlocale("LC_ALL","English")
+Sys.setlocale("LC_ALL","English")
+load("UsingR")
+install.packages("UsingR")
