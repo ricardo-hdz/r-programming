@@ -27,3 +27,20 @@ library("rgl")
 ??install.packages
 library("R330")
 data(wine.df)
+str(wine.df)
+model<-lm(price ~ year + temp + h.rain + w.rain + h.rain*w.rain, wine.df)
+model1<-lm(price ~  h.rain + h.rain*w.rain, wine.df)
+summary(model1)
+drop1(model, year + temp + w.rain)
+coef(model)[4]+800*coef(model)[6]
+
+newdata <- subset(wine.df, temp >= mean(wine.df$temp) & h.rain >= mean(wine.df$h.rain) & w.rain >= mean(wine.df$w.rain))
+predict(model, temp=mean(wine.df$temp), h.rain=mean(mean(wine.df$h.rain)),w.rain=mean(mean(wine.df$w.rain)))
+
+modellog<-lm(log(price) ~ year + temp + h.rain + w.rain + h.rain*w.rain, wine.df)
+drop1(modellog,test="F")
+modellog<-update(modellog, ~.-h.rain:w.rain)
+summary(modellog)
+
+newset <- data.frame(year=1985, temp=mean(wine.df$temp), h.rain=mean(wine.df$h.rain), w.rain=mean(wine.df$w.rain))
+exp(predict(modellog, newdata = newset))
